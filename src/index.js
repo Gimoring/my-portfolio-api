@@ -1,5 +1,6 @@
 const express = require('express');
 const portfolioRouter = require('./routers/portfolios');
+const blogRouter = require('./routers/blogs');
 const mongoose = require('mongoose');
 const config = require('./config/dev');
 
@@ -11,7 +12,8 @@ class Server {
 	}
 
 	setRoute() {
-		this.app.use('/api/v1',portfolioRouter);
+		this.app.use('/api/v1', portfolioRouter);
+		this.app.use('/api/v1', blogRouter);
 	}
 
 	async connectDB() {
