@@ -1,6 +1,7 @@
 const jwt = require('express-jwt');
 const jwksClient = require('jwks-rsa');
 const config = require('../config/dev');
+
 //* 참고
 // https://auth0.com/docs/quickstart/backend/nodejs/01-authorization
 
